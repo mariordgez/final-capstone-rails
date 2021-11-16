@@ -44,3 +44,22 @@ cars = [
 ]
 
 cars.each{ |car| Car.create! car }
+
+users = [
+  {
+    name: 'John Doe',
+    user_name: 'john123'
+  },
+
+  {
+    name: 'Peter Parker',
+    user_name: 'peter456'
+  },
+
+  {
+    name: 'Alex Mason',
+    user_name: 'alex789'
+  }
+]
+
+users.each{ |user| User.create! user }
