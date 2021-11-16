@@ -22,7 +22,7 @@ cars = [
     price: '21900.0',
     image_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-honda-civic-sedan-110-1623810388.jpg',
     delete: false
-  }
+  },
 
   {
     name: '4matic',
@@ -31,7 +31,7 @@ cars = [
     price: '62750.0',
     image_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-mercedes-benz-e450-4matic-sedan-107-1604280340.jpg',
     delete: false
-  }
+  },
 
   {
     name: 'Polestar',
