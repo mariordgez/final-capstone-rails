@@ -6,7 +6,7 @@ class CreateCars < ActiveRecord::Migration[6.1]
       t.string :brand
       t.decimal :price, precision: 10, scale: 2
       t.text :image_url
-      t.boolean :delete
+      t.boolean :removed
       t.timestamps
     end
   end
