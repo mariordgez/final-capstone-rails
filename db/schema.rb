@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_161556) do
     t.string "brand"
     t.decimal "price", precision: 10, scale: 2
     t.text "image_url"
-    t.boolean "remove"
+    t.boolean "removed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
