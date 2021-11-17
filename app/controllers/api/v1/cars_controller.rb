@@ -1,17 +1,21 @@
 class Api::V1::CarsController < ApplicationController
-    def show
-        @car = Car.find(params[:id]) rescue nil
-        
-        unless @car.nil? 
-            render json: {
-                data: @car,
-                message: "successful"
-              }, status: :ok
-        else
-            render json: {
-                data: [],
-                message: "Car not found"
-              }, status: :bad_request
-        end
+  def show
+    @car = begin
+      Car.find(params[:id])
+    rescue StandardError
+      nil
     end
+
+    if @car.nil?
+      render json: {
+        data: [],
+        message: 'Car not found'
+      }, status: :bad_request
+    else
+      render json: {
+        data: @car,
+        message: 'successful'
+      }, status: :ok
+    end
+  end
 end
