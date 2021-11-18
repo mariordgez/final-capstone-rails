@@ -6,12 +6,12 @@ class Api::V1::CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     if @car.save
-      render json: { message: 'Car succesfully added.' }, status: :created, code: 201
+      render json: { message: 'Car succesfully added.' }, status: :created
     else
-      render json: format_errors, status: :not_acceptable, code: 406
+      render json: format_errors, status: :not_acceptable
     end
   rescue StandardError => e
-    render json: { error: e.message }, status: :bad_request, code: 400
+    render json: { error: e.message }, status: :bad_request
   end
 
   private
