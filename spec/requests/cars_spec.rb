@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Cars API', type: :request do
   let!(:car_test) do
     FactoryBot.create(:car, name: 'BWM X2', model: '2021', brand: 'BMW', price: 1_000_000.00,
-                            image_url: 'fakeurl.com/bmw', removed: false)
+                            image_url: 'http://fakeurl.com/bmw', removed: false)
   end
   it 'reponse is success' do
     get "/api/v1/cars/#{car_test.id}"
