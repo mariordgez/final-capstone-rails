@@ -20,15 +20,21 @@ class Api::V1::CarsController < ApplicationController
   end
 
   def index
-    render json: [*Car.all]
+    render json: { data: Car.all }
   end
 
   def create
     @car = Car.new(car_params)
     if @car.save
-      render json: { message: 'Car succesfully added.' }, status: :created
+      render json: {
+        data: Car.all,
+        message: 'Car succesfully added.'
+      }, status: :created
     else
-      render json: format_errors, status: :not_acceptable
+      render json: {
+        data: Car.all,
+        message: format_errors
+      }, status: :not_acceptable
     end
   rescue StandardError => e
     render json: { error: e.message }, status: :bad_request
