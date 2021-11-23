@@ -7,7 +7,7 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
       render json: {
-        data: Reservation.all,
+        data: Reservation.all
       }, status: :created
     else
       render json: {
@@ -18,7 +18,6 @@ class Api::V1::ReservationsController < ApplicationController
   rescue StandardError => e
     render json: { error: e.message }, status: :bad_request
   end
-
 
   private
 
