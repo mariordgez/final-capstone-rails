@@ -1,7 +1,24 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
-    render json: [Reservation.all]
+    render json: { data: Reservation.all }
   end
+
+  def create
+    @reservation = Reservation.new(reservation_params)
+    if @reservation.save
+      render json: {
+        data: Reservation.all,
+      }, status: :created
+    else
+      render json: {
+        data: Reservation.all,
+        message: format_errors
+      }, status: :not_acceptable
+    end
+  rescue StandardError => e
+    render json: { error: e.message }, status: :bad_request
+  end
+
 
   private
 
