@@ -34,6 +34,12 @@ class Api::V1::CarsController < ApplicationController
     render json: { error: e.message }, status: :bad_request
   end
 
+  def update
+    car = Car.find(params[:id])
+    car.update_columns(removed: params[:car][:removed])
+    car.save!
+  end
+
   private
 
   def format_errors
