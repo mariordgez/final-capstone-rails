@@ -29,12 +29,10 @@ ActiveRecord::Schema.define(version: 2021_11_16_161556) do
   create_table "reservations", force: :cascade do |t|
     t.date "date"
     t.string "city"
-    t.bigint "user_id", null: false
-    t.bigint "car_id", null: false
+    t.integer "user_id"
+    t.integer "car_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["car_id"], name: "index_reservations_on_car_id"
-    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,6 +42,4 @@ ActiveRecord::Schema.define(version: 2021_11_16_161556) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "reservations", "cars"
-  add_foreign_key "reservations", "users"
 end

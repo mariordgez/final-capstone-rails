@@ -63,3 +63,21 @@ users = [
 ]
 
 users.each{ |user| User.create! user }
+
+reservations = [
+  { 
+    date: '01/03/2021',
+    city: 'new york',
+    user_id: 1,
+    car_id: 1,
+  },
+  { 
+    date: '02/03/2021',
+    city: 'new yorkee',
+    user_id: 2,
+    car_id: 1,
+  }
+
+]
+
+reservations.each{ |reservation| Reservation.create! reservation }
