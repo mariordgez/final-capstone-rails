@@ -20,7 +20,7 @@ class Api::V1::CarsController < ApplicationController
   end
 
   def index
-    render json: { data: Car.all }
+    render json: { data: Car.all, message: 'Car list successfully fetched!' }
   end
 
   def create
