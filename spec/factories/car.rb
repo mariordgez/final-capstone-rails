@@ -6,6 +6,3 @@ FactoryBot.define do
     city { 'nogales' }
   end
 end
-
-
-
