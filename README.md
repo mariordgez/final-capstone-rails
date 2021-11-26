@@ -105,7 +105,7 @@ Open the rest API client of your choice (we recommend using Thunder client VScod
 
 ### Login Usernames
 
-To login use the one of the following usernames:
+To login use one of the following usernames:
 
 | Username |
 |----------|
