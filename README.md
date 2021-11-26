@@ -2,6 +2,9 @@
 
 Back-end server, providing it with some API endpoints to a to allow it to be used in different ways, rather than just through the site - for example, a mobile app or a CLI application.
 
+## Kanban Board
+[Kanban Board](https://github.com/users/mariordgez/projects/6)
+
 ## Built With
 
 - Ruby v2.7.2
@@ -100,6 +103,16 @@ Open the rest API client of your choice (we recommend using Thunder client VScod
 | Reservations    | `/api/v1/reservations`     | GET    |        |                                                                                                                                          | return all the reservations |
 | Add reservation | `/api/v1/reservations/add` | POST   |        | {"reservation": {"date": "10/10/2021", "city": "city", "car_id": "1", "user_id": "2"}}                                                   | Create a new reservation    |
 
+### Login Usernames
+
+To login use the one of the following usernames:
+
+| Username |
+|----------|
+| john123  |
+| peter456 |
+| alex789  |
+
 ## Authors
 
 👨‍💻 **Eduardo Rodriguez**
@@ -141,6 +154,7 @@ Give a ⭐️ if you like this project!
 - [Microverse](https://www.microverse.org/)
 - [The Odin Project](https://www.theodinproject.com/)
 - [Rails Guides](https://guides.rubyonrails.org/index.html)
+- [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
 ## 📝 License
 
